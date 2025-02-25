@@ -1,0 +1,8 @@
+<% @letters.each do |letter| %>
+<button><%= letter %></button>
+<% end  %>
+<form action="/score" data-turbo="false" method="post">
+  <input type="text" name="letter">
+  <input type="submit" value="add a letter!">
+</form>
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
